@@ -11,7 +11,7 @@
     <div class="container">
         <header>
             <img src="profilepic.png" alt="Your Profile Picture" class="profile-pic">
-            <h1 id="name">Aarin</h1>
+            <h1> Hi, I'm <span class="auto-type"></span></h1>
             <p>Welcome to my portfolio! Here you can find my accomplishments, projects, and contact details.</p>
             <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
         </header>
@@ -43,5 +43,26 @@
             <p>Contact me at: <span id="email">aarin.sandilya12@gmail.com</span></p>
         </footer>
     </div>
+    <section class="contactform">
+        <div class="contact-col">
+            <form action="form-handler.php" method="post">
+                <input type="text" name="name" placeholder="Enter Your Name" required>
+                <input type="email" name="email" placeholder="Enter Email Address" required>
+                <input type="text" name="subject" placeholder="Enter Your Subject" required>
+                <textarea rows="8" name="message" placeholder="Message" required></textarea>
+                <button type="submit" class="hero-btn">Send Message</button>
+              </form>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed(".auto-type", {strings: ["Aarin", "Aarin", "Aarin"],
+            typeSpeed: 150,
+            backSpeed: 150,
+            loop: true
+        })
+    </script>
+
 </body>
 </html>
